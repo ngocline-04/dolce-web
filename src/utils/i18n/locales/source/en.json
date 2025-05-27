@@ -1,0 +1,21 @@
+{
+  "error": {},
+  "text": {
+    "home": "Home",
+    "about": "About",
+    "project": "Project",
+    "services": "Services",
+    "contact": "Contact",
+    "english": "English",
+    "vietnamese": "VietNamese",
+    "table": "Table of Contents",
+    "about_comp": "About Us",
+    "field_active": "Scope of Activities",
+    "partner": "Partners",
+    "process": "Processing Workflow",
+    "media": "Media",
+    "language": "Language"
+  },
+  "alert": {},
+  "validate": {}
+}

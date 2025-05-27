@@ -1,0 +1,41 @@
+.footer_app{
+  padding: 0;
+  background-color: transparent;
+  .item-content {
+    padding: theme('spacing.12') 0;
+    @apply bg-primary-100;
+    &:last-child {
+      width: 40%;
+      justify-content: end;
+      padding-right: 64px;
+      align-items: center;
+    }
+    &:first-child {
+      width: 60%;
+      padding-left: 64px;
+    }
+  }
+  @apply flex justify-between;
+  @media (max-width: theme('screens.tablet.max')) {
+    justify-content: center;
+    align-items: center;
+    // flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
+    .item-content {
+      text-align: center;
+      padding: theme('spacing.12') 0;
+      justify-content: center;
+      @apply bg-primary-100;
+      &:last-child {
+        width: 100%;
+        justify-content: center;
+        background-color: transparent;
+        padding-right: 0;
+      }
+      &:first-child {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+  }
+}

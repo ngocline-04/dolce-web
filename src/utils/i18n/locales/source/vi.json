@@ -1,0 +1,21 @@
+{
+  "error": {},
+  "text": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "project": "Dự án",
+    "services": "Dịch vụ",
+    "contact": "Liên hệ",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh",
+    "table": "Mục lục",
+    "about_comp": "Về chúng tôi",
+    "field_active": "Lĩnh vực hoạt động",
+    "partner": "Đối tác",
+    "process": "Quy trình xử lý",
+    "media": "Truyền thông",
+    "language": "Ngôn ngữ"
+  },
+  "alert": {},
+  "validate": {}
+}

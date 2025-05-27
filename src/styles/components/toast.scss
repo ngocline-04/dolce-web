@@ -1,0 +1,18 @@
+.ant-notification .ant-notification-notice-wrapper {
+  border-radius: 12px;
+}
+
+.ant-notification .ant-notification-notice-wrapper > .ant-notification-notice {
+  padding: 16px;
+}
+
+.ant-notification .ant-notification-notice-wrapper .ant-notification-notice-with-icon > .ant-notification-notice-message {
+  margin-bottom: 0;
+}
+
+.ant-notification .ant-notification-notice-wrapper > .ant-notification-notice-close {
+  width: 24px;
+  height: 24px;
+  top: 16px;
+  right: 12px;
+}

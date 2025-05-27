@@ -1,0 +1,236 @@
+/* init preset className */
+
+@tailwind base;
+
+body, html {
+  position: relative;
+}
+textarea:focus, input:focus{
+  outline: none;
+}
+
+
+@tailwind components;
+@import "./fonts.scss";
+
+@import "./components/buttons.scss";
+@import "./components/dialog.scss";
+@import "./components/radio.scss";
+@import "./components/menu.scss";
+@import "./components/toast.scss";
+@import "./components/table.scss";
+@import "./components/switch.scss";
+@import "./components/progressbar.scss";
+@import "./components/status.scss";
+@import "./components/pagination.scss";
+@import "./components/date-picket.scss";
+@import "./components/badge.scss";
+@import "./components/footer.scss";
+@import "./components/custom-slide.scss";
+@import "./components/loading.scss";
+
+
+@import "./custom_theme.scss";
+
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  background: rgb(var(--color-50));
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: rgb(var(--color-400));
+}
+//Convert color variable to R,G,B index. Include hex, rgb and hsl color.
+//Ex: #FFFFFF --> 255 255 255
+// rgb(255, 255, 255) --> 255 255 255
+// hsl(0,0,100) --> 255 255 255
+@function toRGB($color) {
+  @return unquote(red($color) + " " + green($color) + " " + blue($color));
+}
+
+@layer base {
+  :root {
+    font-family: 'Inter';
+    // font-family: 'Lato';
+    // To use below color variable in css or scss, use following syntax: rgb(var(--color-name))
+    //Ex: rgb(var(--primary-50)) --> rgb(255,249,230)
+    // --text-primary: #{toRGB(#313442)};
+    //🔥🔥🔥🔥🔥🔥 DESIGN SYSTEM 🔥🔥🔥🔥🔥🔥
+    --primary-700: #{toRGB(#004080)};   // Blue đậm
+    --primary-600: #{toRGB(#0059b3)};   // Blue trung tính
+    --primary-500: #{toRGB(#0073e6)};   // Primary blue
+    --primary-400: #{toRGB(#3399ff)};   // Blue sáng
+    --primary-300: #{toRGB(#66b3ff)};   // Sky blue
+    --primary-200: #{toRGB(#99ccff)};   // Nhẹ nhàng hơn
+    --primary-100: #{toRGB(#cce5ff)};   // Gần pastel
+    --primary-50:  #{toRGB(#e6f2ff)};   // Rất nhạt, làm nền
+
+    --color-900: #{toRGB(#0D0D0D)};
+    --color-800: #{toRGB(#2E2E2E)};
+    --color-700: #{toRGB(#4C4C4C)};
+    --color-600: #{toRGB(#5E5E5E)};
+    --color-500: #{toRGB(#858585)};
+    --color-400: #{toRGB(#A7A7A7)};
+    --color-300: #{toRGB(#CCCCCC)};
+    --color-200: #{toRGB(#DFDFDF)};
+    --color-100: #{toRGB(#ECECEC)};
+    --color-50: #{toRGB(#FCFCFD)};
+
+    --error-500: #{toRGB(#FF2B2B)};
+    --pending-500: #{toRGB(#FCC25A)};
+    --success-500: #{toRGB(#08CB66)};
+
+    
+    --common-1000: #{toRGB(#FFFFFF)};
+    --common-0: #{toRGB(#1F242C)};
+    --background-default: #{toRGB(#F0DED4)};
+    --btn-default: #{toRGB(#BF613C)}
+  }
+}
+
+// /* init preset className */
+.h1 {
+  font-size: theme('fontSize.48');
+  line-height: theme('lineHeight.64');
+  font-weight: theme('fontWeight.semibold');
+}
+
+.h2 {
+  font-size: theme('fontSize.40');
+  line-height: theme('lineHeight.56');
+  font-weight: theme('fontWeight.bold');
+}
+
+.h3 {
+  font-size: theme('fontSize.32');
+  line-height: theme('lineHeight.40');
+  font-weight: theme('fontWeight.bold');
+}
+
+.h4 {
+  font-size: theme('fontSize.24');
+  line-height: theme('lineHeight.36');
+  font-weight: theme('fontWeight.bold');
+}
+
+.title1 {
+  font-size: theme('fontSize.20');
+  line-height:theme('lineHeight.32');
+  font-weight: theme('fontWeight.bold');
+}
+.title2 {
+  font-size: theme('fontSize.18');
+  line-height:theme('lineHeight.28');
+  font-weight: theme('fontWeight.bold');
+}
+
+@mixin body($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+.body-text {
+  @include body(theme('fontSize.20'), theme('lineHeight.32'), theme('fontWeight.bold'));
+}
+
+.body-text-semibold {
+  @include body(theme('fontSize.20'), theme('lineHeight.32'), theme('fontWeight.semibold'));
+}
+
+.body-text-medium {
+  @include body(theme('fontSize.20'), theme('lineHeight.32'), theme('fontWeight.medium'));
+}
+.body-text-24-bold {
+  @include body(theme('fontSize.24'), theme('lineHeight.28'), theme('fontWeight.bold'));
+}
+
+.body-text-24-semibold {
+  @include body(theme('fontSize.24'), theme('lineHeight.32'), theme('fontWeight.semibold'));
+}
+
+.body-text-24-medium {
+  @include body(theme('fontSize.24'), theme('lineHeight.32'), theme('fontWeight.medium'));
+}
+.body-text-24-regular {
+  @include body(theme('fontSize.24'), theme('lineHeight.32'), theme('fontWeight.normal'));
+}
+.body-text-18-bold {
+  @include body(theme('fontSize.18'), theme('lineHeight.28'), theme('fontWeight.bold'));
+}
+
+.body-text-18-semibold {
+  @include body(theme('fontSize.18'), theme('lineHeight.28'), theme('fontWeight.semibold'));
+}
+
+.body-text-18-medium {
+  @include body(theme('fontSize.18'), theme('lineHeight.28'), theme('fontWeight.medium'));
+}
+.body-text-18-regular {
+  @include body(theme('fontSize.18'), theme('lineHeight.28'), theme('fontWeight.normal'));
+}
+.body-text-16-bold {
+  @include body(theme('fontSize.16'), theme('lineHeight.24'), theme('fontWeight.bold'));
+}
+
+.body-text-16-semibold {
+  @include body(theme('fontSize.16'), theme('lineHeight.24'), theme('fontWeight.semibold'));
+}
+
+.body-text-16-medium {
+  @include body(theme('fontSize.16'), theme('lineHeight.24'), theme('fontWeight.medium'));
+}
+.body-text-16-regular {
+  @include body(theme('fontSize.16'), theme('lineHeight.24'), theme('fontWeight.normal'));
+}
+.body-text-14-bold {
+  @include body(theme('fontSize.14'), theme('lineHeight.20'), theme('fontWeight.bold'));
+}
+
+.body-text-14-semibold {
+  @include body(theme('fontSize.14'), theme('lineHeight.20'), theme('fontWeight.semibold'));
+}
+
+.body-text-14-medium {
+  @include body(theme('fontSize.14'), theme('lineHeight.20'), theme('fontWeight.medium'));
+}
+.body-text-14-regular {
+  @include body(theme('fontSize.14'), theme('lineHeight.20'), theme('fontWeight.normal'));
+}
+.body-text-12-bold {
+  @include body(theme('fontSize.12'), theme('lineHeight.16'), theme('fontWeight.bold'));
+}
+
+.body-text-12-semibold {
+  @include body(theme('fontSize.12'), theme('lineHeight.16'), theme('fontWeight.semibold'));
+}
+
+.body-text-12-medium {
+  @include body(theme('fontSize.12'), theme('lineHeight.16'), theme('fontWeight.medium'));
+}
+.body-text-12-regular {
+  @include body(theme('fontSize.12'), theme('lineHeight.16'), theme('fontWeight.normal'));
+}
+.body-text-10-bold {
+  @include body(theme('fontSize.10'), theme('lineHeight.12'), theme('fontWeight.bold'));
+}
+
+.body-text-10-semibold {
+  @include body(theme('fontSize.10'), theme('lineHeight.12'), theme('fontWeight.semibold'));
+}
+
+.body-text-10-medium {
+  @include body(theme('fontSize.10'), theme('lineHeight.12'), theme('fontWeight.medium'));
+}
+.body-text-10-regular {
+  @include body(theme('fontSize.10'), theme('lineHeight.12'), theme('fontWeight.normal'));
+}

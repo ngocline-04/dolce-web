@@ -1,0 +1,111 @@
+.wrap_slide_account {
+  .active {
+    &:nth-child(1) {
+      background: red;
+    }
+  }
+}
+
+.ant-layout.ant-layout-has-sider {
+  @media (max-width: theme('screens.tablet.max')) { 
+    position: relative;
+    .ant-layout-sider-zero-width-trigger.ant-layout-sider-zero-width-trigger-left {
+      display: none;
+    }
+    .ant-layout-sider.ant-layout-sider-light.ant-layout-sider-below.sider_bar_table {
+      position: absolute !important;
+      z-index: 100;
+      height: 100%;
+      width: 100% !important;
+      max-width: 100% !important;
+      background-color: rgba(0, 0, 0, 0.50);
+      .outside_sider {
+        position: absolute !important;
+        width: calc(100% - 270px);
+        height: 100%;
+        // background: #005084;
+        right: 0px;
+      }
+    }
+    .ant-layout-sider.ant-layout-sider-light.ant-layout-sider-collapsed.ant-layout-sider-below.ant-layout-sider-zero-width.sider_bar_table {
+      position: unset !important;
+    }
+  }
+}
+.header_home_page {
+  background: transparent;
+  @apply mt-48;
+  @media (max-width: theme('screens.tablet.max')) { 
+    z-index: 50;
+    position: sticky;
+    background: theme('colors.color.50');
+    height: 64px;
+    display: flex;
+    top: 0;
+    @apply px-28;
+    @apply mt-0;
+  }
+  @media (max-width: theme('screens.mobile.max')) { 
+    @apply px-16;
+  }
+}
+
+.wrap_content_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+  .content_page {
+    width: 884px;
+    @media (max-width: theme('screens.tablet.max')) { 
+      width: 712px;
+    }
+    @media (max-width: theme('screens.mobile.max')) { 
+      width: 100%;
+    }
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide_scrollbar {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.tabs_custom {
+  .ant-tabs-nav-list {
+    width: 100%;
+    .ant-tabs-tab{
+      width: 50%;
+      margin: 0px;
+      text-align: center;
+      justify-content: center;
+      .ant-tabs-tab-btn{
+        color: theme('colors.color.700');
+      }
+      &.ant-tabs-tab-active{
+        .ant-tabs-tab-btn{
+          color: theme('colors.color.900');
+        }
+      }
+    }
+  }
+  .ant-tabs-ink-bar {
+    background: theme('colors.primary.500');
+  }
+}
+
+.ant-picker-input{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.ant-modal .ant-modal-content {
+  @apply p-24
+}
